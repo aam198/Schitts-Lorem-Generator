@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/main.css">
+    <title>Schitt's Creek Lorem Ipsum Generator!</title>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">Placeholder Logo</div>
+        <div class=theme">Theme Selector</div>
+    </nav>
+    
+    <section class="section-center">
+        <img class="Screek" src="assets/Schitt's_Creek_logo_dk.png" />
+
+        <h1><span class="schitt">Schitt<sup>$</sup></span> <span class="creek">Creek</span><br /> Lorem Ipsum Generator!</h1>
+
+        <form class ="lorem-form">
+            <label for="numPara">How many paragraphs:</label>
+            <div class="paraAmountNum">
+                <input type="range" min="1" max="10" value="2" id="numParaRange" />
+                <input type="number" min = "1" max="10" value="5" id="numofPara" />
+            </div>
+
+            <button type="submit" class="btn">Generate Lorem</button>
+        </form>
+
+        <article class="lorem-text"></article>
+    </section>
+
+    <!-- https://www.youtube.com/watch?v=FxGoTtoFvfs -->
+
+    <script src="script/index.js"></script>
+</body>
+</html>

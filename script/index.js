@@ -21,6 +21,8 @@ form.addEventListener('submit', e => {
 numofPara.addEventListener('input', syncParaNumbers);
 numParaRange.addEventListener('input', syncParaNumbers);
 
+
+
 const text = [
     `I just want you to know that no matter what anyone says, you will always be our first dad. Hide your diamonds, hide your exes, I’m a little bit Alexis! Oh, I’d kill for a good coma right now. Like Beyoncé, I excel as a solo artist. If you’re looking for an ass to kiss, it’s mine. This place is almost charming. Very rustic cottage… I was half expecting early Unabomber.`,
     `OK, yeah, no, I did not write this… OK, like, I didn’t even choose this font! It’s horrible. What kind of barnyard were you raised in? I don’t want to brag, but Us Weekly once described me as ‘up for anything.' The idea of me life coaching another human being should scare you… a lot. I totally get that. We just need a body. Then go to the morgue.`,
@@ -33,3 +35,4 @@ const text = [
     `Stop doing that with your face. He loves everyone. Men, women, women who become men, men who become women. I’m his father, and I always wanted his life to be easy. But, you know, just pick one gender, and maybe, maybe everything would’ve been less confusing.`,
     `I would be pleased to RSVP as pending. You might want to rethink the nightgown first. There’s a whole Ebenezer Scrooge thing happening. My best to Bob Cratchet. Allow me to offer you some advice. Take a thousand naked pictures of yourself now. You may currently think, ‘Oh, I’m too spooky,’ or ‘Nobody wants to see these tiny boobies,’ but believe me: One day you will look at those photos with much kinder eyes and say, ‘Dear God, I was a beautiful thing!`
 ]
+// https://www.scarymommy.com/schitts-creek-quotes/

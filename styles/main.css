@@ -64,6 +64,34 @@ label {
     font-size: 2rem;
 }
 
+/* Header */
+
+header {
+  display:flex;
+  justify-content: space-between;
+  padding: 1.3rem 2rem 1.3rem 2rem;
+  margin-bottom: 3em;
+}
+
+.logo {
+  display: flex;
+  justify-content: start;
+  box-shadow: 0 0 0.7rem rgba(0, 0, 0, 0.1);
+  transition: box-shadow 4s, transform 4s;
+}
+
+.logo img{
+  height: 100px;
+  width: 100%;
+}
+
+.logo img:hover{
+  box-shadow: 0 0 0.7rem rgba(0, 0, 0, 0.2);
+  transform: translateY(-5px);
+}
+
+
+
 .section-center {
     display: flex;
     flex-direction: column;

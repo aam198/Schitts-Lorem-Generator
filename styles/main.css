@@ -22,6 +22,7 @@
     --color-yellow: #eec71a;
 }
 
+/* Global Styles */
 
 html{
     font-size: 100%; 
@@ -52,6 +53,13 @@ h1{
     margin: 1rem 0;
 }
 
+h2{
+  font-family: var(--main-font);
+  font-size: var(--heading-2);
+  color: var(--color-xlt-gray);
+  margin: 1rem 0;
+}
+
 sup{
     font-size: 1.2rem;
 }
@@ -63,6 +71,17 @@ img{
 label {
     font-size: 2rem;
 }
+
+::selection{
+  color: var(--bkg-color);
+  background: var(--color-yellow);
+}
+
+::-moz-selection{
+  color: var(--bkg-color);
+  background: var(--color-yellow);
+}
+
 
 /* Header */
 
@@ -90,36 +109,34 @@ header {
   transform: translate3d(0px,-1px,0px);
 }
 
-
+/* Paragraph Selection Styles */
 
 .section-center {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .lorem-form {
-    text-transform: capitalize;
-    margin-top: 3rem;
-    margin-bottom: 4rem;
-    padding: 1.5rem;
-    width: 80%;
-    max-width: 900px;
+  text-transform: capitalize;
+  margin-top: 3rem;
+  margin-bottom: 4rem;
+  padding: 1.5rem;
+  width: 80%;
+  max-width: 900px;
 
-    backdrop-filter: blur(15px) saturate(135%);
-    -webkit-backdrop-filter: blur(15px) saturate(135%);
-    background-color: rgba(83, 83, 83, 0.83);
-    border-radius: 12px;
-    border: 1px solid rgba(255, 255, 255, 0.125);
+  backdrop-filter: blur(15px) saturate(135%);
+  -webkit-backdrop-filter: blur(15px) saturate(135%);
+  background-color: rgba(83, 83, 83, 0.83);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.125);
 
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
-
-
 
 
 input {
@@ -132,7 +149,7 @@ input {
   font-size: 2.25rem;
 }
 
-
+/* Generate Button  */
 .btn {
   text-transform: uppercase;
   background: transparent;
@@ -157,18 +174,21 @@ input {
   border-left: inherit;
   z-index: -1;
 }
+
 .btn::before {
   height: 80%;
   top: 10%;
   left: calc(-0.15em - 0.08em * 2);
   filter: brightness(0.8);
 }
+
 .btn::after {
   height: 60%;
   top: 20%;
   left: calc(-0.15em * 2 - 0.08em * 3);
   filter: brightness(0.6);
 }
+
 .btn span {
   position: relative;
   box-sizing: border-box;
@@ -177,54 +197,50 @@ input {
 }
 
 .btn:hover{
-    color: var(--bkg-color);
-    background: var(--color-yellow);
-    border: 1px solid var(--color-lt-gray);
+  color: var(--bkg-color);
+  background: var(--color-yellow);
+  border: 1px solid var(--color-lt-gray);
+  transform: translateX(0.15em);
 }
 
 .btn:hover span{
-    transform: translateX(0.15em);
+  transform: translateX(0.15em);
+}
+
+/* Text/Quote Content area */
+
+.lorem-text{
+  backdrop-filter: blur(15px) saturate(135%);
+  -webkit-backdrop-filter: blur(15px) saturate(135%);
+  background-color: rgba(83, 83, 83, 0.83);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.125);
+
+  margin-bottom: 2rem;
+}
+
+.fadeIn {
+  animation: fadeIn 1s;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.hidden{
+  opacity: 0;
 }
 
 .result {
-    width: 80vw;
-    margin: 1rem auto;
+  width: 80vw;
+  margin: 1rem auto;
+  padding: 0 1rem;
 }
 
-/* Input Range Color */
 
-/* @media screen and (-webkit-min-device-pixel-ratio:0) {
-    input[type='range'] {
-      overflow: hidden;
-      -webkit-appearance: none;
-      background-color: transparent;
-    }
-    
-    input[type='range']::-webkit-slider-runnable-track {
-      -webkit-appearance: none;
-      color: #13bba4;
-    }
-    
-    input[type='range']::-webkit-slider-thumb {
-      -webkit-appearance: none;
-      cursor: ew-resize;
-      background: #434343;
-      box-shadow: -80px 0 0 80px #43e5f7;
-    }
 
-}
-*/
-
-input[type="range"]::-moz-range-progress {
-  background-color: var(--color-yellow);
-}
-input[type="range"]::-moz-range-track {  
-  background-color: var(--bkg-color);
-}
-/* IE*/
-input[type="range"]::-ms-fill-lower {
-  background-color: #43e5f7; 
-}
-input[type="range"]::-ms-fill-upper {  
-  background-color: transparent;
-} 

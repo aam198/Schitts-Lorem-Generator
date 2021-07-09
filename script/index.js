@@ -6,19 +6,22 @@ const result = document.querySelector(".lorem-text");
 function syncParaNumbers(e) {
     const value = e.target.value;
     numofPara.value = value;
-
 }
 
 form.addEventListener('submit', e => {
     e.preventDefault();
+
+    const heading=document.querySelector(".heading");
+    heading.classList.remove('hidden');
     const value = parseInt(numofPara.value, 10);
+    result.classList.add('fadeIn');
+    result.classList.remove('hidden');
     let tempText = text.slice(0, value);
     tempText = tempText.map(item => `<p class="result">${item}</p>`).join("");
     result.innerHTML = tempText;
 });
 
 numofPara.addEventListener('input', syncParaNumbers);
-
 
 
 

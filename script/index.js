@@ -1,13 +1,12 @@
 const form = document.querySelector(".lorem-form");
 const numofPara = document.getElementById("numofPara");
-const numParaRange = document.getElementById("numParaRange");
 const result = document.querySelector(".lorem-text");
 
 
 function syncParaNumbers(e) {
     const value = e.target.value;
     numofPara.value = value;
-    numParaRange.value = value;
+
 }
 
 form.addEventListener('submit', e => {
@@ -19,7 +18,7 @@ form.addEventListener('submit', e => {
 });
 
 numofPara.addEventListener('input', syncParaNumbers);
-numParaRange.addEventListener('input', syncParaNumbers);
+
 
 
 

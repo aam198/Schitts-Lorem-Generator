@@ -99,7 +99,7 @@ header {
 }
 
 .logo img{
-  height: 100px;
+  height: 90px;
   width: 100%;
 }
 
@@ -168,6 +168,7 @@ button.control:hover, button.control:focus{
   padding: 1.5rem;
   width: 80%;
   max-width: 900px;
+  min-width: 413px;
 
   backdrop-filter: blur(15px) saturate(135%);
   -webkit-backdrop-filter: blur(15px) saturate(135%);
@@ -180,7 +181,6 @@ button.control:hover, button.control:focus{
   flex-wrap: wrap;
   justify-content: space-around;
 }
-
 
 input {
   padding: 0.30rem 0.5rem;
@@ -286,4 +286,19 @@ input {
 }
 
 
-
+@media only screen and (max-width: 768px) {
+    h1{
+      font-size: var(--heading-3);
+    }
+    h2{
+      font-size: var(--heading-3);
+    }
+    label {
+      font-size: 1.7rem;
+      margin-bottom: .5rem;
+    }
+    .lorem-form{
+      margin-top: 2rem;
+      padding: 0.8rem 1.4rem 1.4rem 1.4rem;
+    }
+}

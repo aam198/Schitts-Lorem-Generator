@@ -20,6 +20,8 @@
     --color-lt-gray: #bbbfbf;
     --color-xlt-gray: #f2f7f7;
     --color-yellow: #eec71a;
+    --color-container:  rgba(83, 83, 83, 0.83);
+    --container-border: 1px solid rgba(255, 255, 255, 0.125);
 }
 
 /* Global Styles */
@@ -94,18 +96,25 @@ header {
 .logo {
   display: flex;
   justify-content: start;
-  box-shadow: 0 0 0.9rem rgba(0, 0, 0, 0.1);
   transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
 .logo img{
   height: 90px;
   width: 100%;
+  box-shadow: 0px 0 10px 1px rgb(0 0 0 / 20%);
 }
 
 .logo img:hover{
-  box-shadow: 0 0 0.7rem rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 0.7rem rgba(0, 0, 0, 0.5);
   transform: translate3d(0px,-1px,0px);
+}
+
+.nav-controls{
+  display: flex;
+  align-items: center;
+  justify-content:center;
+  margin-right: 3rem;
 }
 
 button.control{
@@ -151,6 +160,44 @@ button.control:hover, button.control:focus{
   }
 }
 
+/* Theme Container & Options */
+
+.theme-container{
+  position: absolute;
+  padding: 2rem;
+  right: 0;
+  top: 5.6rem;
+  margin-right: 4rem;
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0px 0 10px 1px rgb(0 0 0 / 20%);
+  backdrop-filter: blur(15px) saturate(135%);
+  -webkit-backdrop-filter: blur(15px) saturate(135%);
+  background-color: var(--color-container);
+  border-radius: 4px;
+  border: var(--container-border);
+  border-radius: 0.25em;
+  visibility: hidden;
+}
+
+.theme-container.visible{
+  visibility: visible;
+  animation: fade-in-top 1s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+}
+
+@keyframes fade-in-top {
+  0% {
+    -webkit-transform: translateY(-50px);
+    transform: trasnlateY(-50px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
 
 /* Paragraph Selection Styles */
 
@@ -172,9 +219,9 @@ button.control:hover, button.control:focus{
 
   backdrop-filter: blur(15px) saturate(135%);
   -webkit-backdrop-filter: blur(15px) saturate(135%);
-  background-color: rgba(83, 83, 83, 0.83);
-  border-radius: 12px;
-  border: 1px solid rgba(255, 255, 255, 0.125);
+  background-color: var(--color-container);
+  border-radius: 4px;
+  border: var(--container-border);
 
   display: flex;
   flex-direction: row;
@@ -186,7 +233,7 @@ input {
   padding: 0.30rem 0.5rem;
   width: 5rem;
   border-radius: 0.5rem;
-  border: none;   
+  border: var(--container-border);
   margin-bottom: 3px;
   margin-top: 3px;
   font-size: 2.25rem;
@@ -255,9 +302,10 @@ input {
 .lorem-text{
   backdrop-filter: blur(15px) saturate(135%);
   -webkit-backdrop-filter: blur(15px) saturate(135%);
-  background-color: rgba(83, 83, 83, 0.83);
-  border-radius: 12px;
-  border: 1px solid rgba(255, 255, 255, 0.125);
+  background-color: var(--color-container);
+  border-radius: 4px;
+  border: var(--container-border);
+  font-size: 1.2rem;
 
   margin-bottom: 2rem;
 }

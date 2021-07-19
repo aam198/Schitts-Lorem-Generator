@@ -1,12 +1,40 @@
 const form = document.querySelector(".lorem-form");
 const numofPara = document.getElementById("numofPara");
 const result = document.querySelector(".lorem-text");
+const themeDisplay = document.getElementById('theme-display');
+const themeContainer = document.querySelector('.theme-container');
+const themeSelectors = document.getElementsByClassName('theme-select');
 
 
 function syncParaNumbers(e) {
     const value = e.target.value;
     numofPara.value = value;
 }
+
+
+const showThemeContainer = () => {
+    themeContainer.classList.add('visible');
+    [...themeSelectors].forEach(item => {
+      item.tabIndex = 0
+    });
+  }
+  
+  const hideThemeContainer = () => {
+    themeContainer.classList.remove('visible');
+    [...themeSelectors].forEach(item => {
+      item.tabIndex = -1
+    });
+  }
+
+themeDisplay.addEventListener('click', () => {
+    if (themeContainer.classList.contains('visible')) {
+      hideThemeContainer();
+    } else {
+      showThemeContainer();
+    }
+  });
+
+
 
 form.addEventListener('submit', e => {
     e.preventDefault();
@@ -23,7 +51,7 @@ form.addEventListener('submit', e => {
 
 numofPara.addEventListener('input', syncParaNumbers);
 
-
+// Array of paragraphs
 
 const text = [
     `I just want you to know that no matter what anyone says, you will always be our first dad. Hide your diamonds, hide your exes, I’m a little bit Alexis! Oh, I’d kill for a good coma right now. Like Beyoncé, I excel as a solo artist. If you’re looking for an ass to kiss, it’s mine. This place is almost charming. Very rustic cottage… I was half expecting early Unabomber.`,

@@ -17,6 +17,7 @@
     --fw-700: 700;
 
     --bkg-color: #333438;
+    --footer-clr: #252629;
     --color-lt-gray: #bbbfbf;
     --color-xlt-gray: #f2f7f7;
     --color-yellow: #eec71a;
@@ -30,9 +31,7 @@ html{
     font-size: 100%; 
 }
 
-*,
-::after,
-::before {
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -45,6 +44,7 @@ body{
     font-family: var(--font-second);
     color: var(--color-xlt-gray);
     line-height: 1.75;
+    margin: 0;
 }
 
 h1{
@@ -371,6 +371,19 @@ input {
   margin: 1rem auto;
   padding: 0 1rem;
 }
+
+/* Footer */
+
+footer {
+  display:flex;
+  justify-content: space-between;
+  padding: 1.5rem 3rem 1.5rem 3rem;
+  background-color: var(--footer-clr);
+  height: 10rem;
+}
+
+
+/* Media Queries  */
 
 
 @media only screen and (max-width: 768px) {

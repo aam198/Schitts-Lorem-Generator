@@ -33,18 +33,18 @@ html{
 
 * {
     margin: 0;
-    padding: 0;
     box-sizing: border-box;
 }
 
 
-body{
+html, body{
     font-size: var(--baseFontSize);
     background-color: var(--bkg-color);
     font-family: var(--font-second);
     color: var(--color-xlt-gray);
     line-height: 1.75;
-    margin: 0;
+    min-height: 10vh;
+    margin: 0;;
 }
 
 h1{
@@ -53,6 +53,7 @@ h1{
     font-weight: 400;
     color: var(--color-xlt-gray);
     margin: 1rem 0;
+    
 }
 
 h2{
@@ -109,6 +110,10 @@ header {
 .logo img:hover{
   box-shadow: 0 0 0.7rem rgba(0, 0, 0, 0.5);
   transform: translate3d(0px,-1px,0px);
+}
+
+.main{
+  margin-bottom: 5em;
 }
 
 .nav-controls{
@@ -176,7 +181,6 @@ button.control:hover, button.control:focus{
   backdrop-filter: blur(15px) saturate(135%);
   -webkit-backdrop-filter: blur(15px) saturate(135%);
   background-color: var(--color-container);
-  border-radius: 4px;
   border: var(--container-border);
   border-radius: 0.25em;
   visibility: hidden;
@@ -200,11 +204,19 @@ button.control:hover, button.control:focus{
   }
 }
 
+/* Theme Container */
+.theme-container button{
+  background-color: transparent;
+  border: 0;
+}
+
+
 .theme-select .theme-label::before {
   content: "";
   z-index: -1;
   position: absolute;
   background-color: var(--color-yellow);
+  text-align: left;
   bottom: 0;
   left: 0;
   width: 100%;
@@ -213,30 +225,59 @@ button.control:hover, button.control:focus{
   transition: max-width 500ms;
 }
 
+.theme-label{
+  font-family: var(--font-second);
+  color: var(--color-xlt-gray);
+  text-transform: uppercase;
+  text-align: left;
+  margin: 0.5rem 0;
+  font-size: 1rem;
+}
+
 .theme-select .theme{
   display: flex;
   justify-content:center;
   align-items: center;
   padding: 1rem;
-  background-color: #303f50;
+  background-color: transparent;
+  border: 1px solid var(--bkg-color);
   border-radius: 0.25em;
   transition: filter 500ms;
   text-align: left;
   cursor: pointer;
   color: var(--color-yellow);
+  transition: background-color 500ms;
 }
 
+.theme-select .theme:hover{
+  background-color: var(--bkg-color);
+  box-shadow: 0px 0 10px 1px rgb(0 0 0 / 20%);
+}
+/* To Style the tiny color boxes in theme select */
 .theme-select .theme .color{
   height: 1rem;
   width: 1rem;
   margin: 0 0.125rem;
   flex: 1 0 1rem;
+  border-radius: 4px;
 }
 
 #light-select .color.background{
   background-color: #fff;
 }
 
+#light-select .color.shade-100{
+  background-color: var(--color-yellow);
+}
+#light-select .color.shade-300{
+  background-color: var( --color-lt-gray);
+}
+#light-select .color.shade-500{
+  background-color: var( --footer-clr);
+}
+#light-select .color.shade-500{
+  background-color: var( --footer-clr);
+}
 
 /* Paragraph Selection Styles */
 
@@ -345,7 +386,6 @@ input {
   border-radius: 4px;
   border: var(--container-border);
   font-size: 1.2rem;
-
   margin-bottom: 2rem;
 }
 
@@ -380,6 +420,7 @@ footer {
   padding: 1.5rem 3rem 1.5rem 3rem;
   background-color: var(--footer-clr);
   height: 10rem;
+  margin-top: auto;
 }
 
 

@@ -417,7 +417,7 @@ footer {
   justify-content: space-between;
   padding: 2rem 3rem 1.5rem 3rem;
   background-color: var(--footer-clr);
-  height: 20rem;
+  height: 17rem;
   width: 100%;
 }
 
@@ -430,6 +430,8 @@ footer a {
   display: flex;
   align-content: center;
   justify-content: space-between;
+  padding-top: 1rem;
+  flex-wrap: wrap;
 }
 
 .logo {
@@ -463,8 +465,11 @@ footer a {
 }
 
 .contact {
-  height: 3rem;
+  height: 1rem;
   display: flex;
+  flex-direction: column;
+  padding: 10px;
+  margin-bottom: 10px;
 }
 .email a {
   font-family: var(--main-font);
@@ -477,13 +482,39 @@ footer a {
   transform: translate3d(0px, -1px, 0px);
   color: var(--color-yellow);
   border-bottom: 4px solid var(--color-xlt-gray);
+  transition: 200ms ease-in;
 }
+
+.social {
+  display: flex;
+  justify-content: flex-end;
+  font-size: 3rem;
+  margin-top: 0.7rem;
+}
+
+.social i {
+  margin: 0 1.5rem 0 0;
+}
+
+.social i:hover {
+  color: var(--color-yellow);
+  transition: 200ms ease-in;
+}
+
 .copyright {
+  height: 1.5rem;
+  width: 100%;
   font-weight: var(--fw-400);
   font-family: var(--font-second);
   display: flex;
   align-content: center;
   justify-content: center;
+}
+
+.copyright i {
+  display: flex;
+  align-items: center;
+  padding-right: 0.2rem;
 }
 
 /* Media Queries  */
@@ -495,6 +526,9 @@ footer a {
   h2 {
     font-size: var(--heading-3);
   }
+  h3 {
+    font-size: var(--heading-4);
+  }
   label {
     font-size: 1.7rem;
     margin-bottom: 0.5rem;
@@ -502,5 +536,32 @@ footer a {
   .lorem-form {
     margin-top: 2rem;
     padding: 0.8rem 1.4rem 1.4rem 1.4rem;
+  }
+  footer {
+    height: 30rem;
+    align-content: center;
+  }
+  .logo {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 1rem;
+  }
+
+  .contact {
+    height: 10rem;
+    display: flex;
+    align-items: center;
+  }
+
+  h3 span.email a {
+    margin-left: 5.5rem;
+  }
+  .social {
+    font-size: 2rem;
+    padding-top: 1.5rem;
+  }
+  .copyright {
+    align-content: flex-end;
   }
 }

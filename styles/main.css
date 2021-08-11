@@ -20,9 +20,15 @@
   --footer-clr: #252629;
   --color-lt-gray: #bbbfbf;
   --color-xlt-gray: #f2f7f7;
+  --color-white: #fff;
   --color-yellow: #eec71a;
   --color-container: rgba(83, 83, 83, 0.83);
   --container-border: 1px solid rgba(255, 255, 255, 0.125);
+
+  --cyber-yellow: #fcee0a;
+  --cyber-blue: #02d8f3;
+  --cyber-red: #ff003c;
+  --cyber-blk: #010101;
 }
 
 /* Global Styles */
@@ -258,7 +264,7 @@ button.control:focus {
 }
 
 #light-select .color.background {
-  background-color: #fff;
+  background-color: var(--color-white);
 }
 
 #light-select .color.shade-100 {
@@ -268,10 +274,35 @@ button.control:focus {
   background-color: var(--color-lt-gray);
 }
 #light-select .color.shade-500 {
-  background-color: var(--footer-clr);
+  background-color: var(--bkg-color);
 }
-#light-select .color.shade-500 {
-  background-color: var(--footer-clr);
+
+#dark-select .color.background {
+  background-color: var(--bkg-color);
+}
+
+#dark-select .color.shade-100 {
+  background-color: var(--color-lt-gray);
+}
+#dark-select .color.shade-300 {
+  background-color: var(--color-yellow);
+}
+#dark-select .color.shade-500 {
+  background-color: var(--color-white);
+}
+
+#neon-select .color.background {
+  background-color: var(--cyber-yellow);
+}
+
+#neon-select .color.shade-100 {
+  background-color: var(--cyber-blue);
+}
+#neon-select .color.shade-300 {
+  background-color: var(--cyber-red);
+}
+#neon-select .color.shade-500 {
+  background-color: var(--cyber-blk);
 }
 
 /* Paragraph Selection Styles */

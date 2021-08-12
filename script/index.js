@@ -5,32 +5,39 @@ const numofPara = document.getElementById("numofPara");
 const result = document.querySelector(".lorem-text");
 const themeDisplay = document.getElementById("theme-display");
 const themeContainer = document.querySelector(".theme-container");
-const themeSelectors = document.getElementsByClassName("theme-select");
 
-const getTheme = () => {
-  const theme = localStorage.getItem("theme");
-  theme && setActiveSelector(theme);
-  root.className = theme;
-  const shade = getComputedStyle(document.documentElement).getPropertyValue(
-    "--shade-100"
-  );
-  document
-    .querySelector('meta[name="theme-color"]')
-    .setAttribute("content", shade);
-};
+let theme = localStorage.getItem("theme");
 
-const setTheme = (className) => {
-  var root = document.getElementsByTagName("html")[0];
-  root.className = className;
-  localStorage.setItem("theme", className);
-  const shade = getComputedStyle(document.documentElement).getPropertyValue(
-    "--shade-100"
-  );
-  document
-    .querySelector('meta[name="theme-color"]')
-    .setAttribute("content", shade);
-  setActiveSelector(className);
-};
+if (theme == null) {
+  setTheme("light");
+} else {
+  setTheme(theme);
+}
+
+let themeDots = document.getElementsByClassName("theme-select");
+for (var i = 0; themeDots.length > i; i++) {
+  themeDots[i].addEventListener("click", function () {
+    let mode = this.dataset.mode;
+    console.log("Option clicked:", mode);
+    setTheme(mode);
+  });
+}
+
+function setTheme(mode) {
+  if (mode == "dark") {
+    document.getElementById("theme-style").href = "styles/main.css";
+  }
+
+  if (mode == "light") {
+    document.getElementById("theme-style").href = "styles/light.css";
+  }
+
+  if (mode == "neon") {
+    document.getElementById("theme-style").href = "styles/neon.css";
+  }
+
+  localStorage.setItem("theme", mode);
+}
 
 function syncParaNumbers(e) {
   const value = e.target.value;
@@ -38,7 +45,7 @@ function syncParaNumbers(e) {
 }
 
 const setActiveSelector = (className) => {
-  var selectedTheme = document.getElementById(`${className}-select`);
+  var selectedTheme = document.getElementById(`${className}-mode`);
   [...themeSelectors].forEach((item) => {
     item.classList.remove("active");
   });
@@ -48,9 +55,6 @@ const setActiveSelector = (className) => {
 
 const showThemeContainer = () => {
   themeContainer.classList.add("visible");
-  [...themeSelectors].forEach((item) => {
-    item.tabIndex = 0;
-  });
 };
 
 const hideThemeContainer = () => {
@@ -67,8 +71,6 @@ themeDisplay.addEventListener("click", () => {
     showThemeContainer();
   }
 });
-
-getTheme();
 
 form.addEventListener("submit", (e) => {
   e.preventDefault();

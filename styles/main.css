@@ -263,45 +263,45 @@ button.control:focus {
   border-radius: 4px;
 }
 
-#light-select .color.background {
+#light-mode .color.background {
   background-color: var(--color-white);
 }
 
-#light-select .color.shade-100 {
+#light-mode .color.shade-100 {
   background-color: var(--color-yellow);
 }
-#light-select .color.shade-300 {
+#light-mode .color.shade-300 {
   background-color: var(--color-lt-gray);
 }
-#light-select .color.shade-500 {
+#light-mode .color.shade-500 {
   background-color: var(--bkg-color);
 }
 
-#dark-select .color.background {
+#dark-mode .color.background {
   background-color: var(--bkg-color);
 }
 
-#dark-select .color.shade-100 {
+#dark-mode .color.shade-100 {
   background-color: var(--color-lt-gray);
 }
-#dark-select .color.shade-300 {
+#dark-mode .color.shade-300 {
   background-color: var(--color-yellow);
 }
-#dark-select .color.shade-500 {
+#dark-mode .color.shade-500 {
   background-color: var(--color-white);
 }
 
-#neon-select .color.background {
+#neon-mode .color.background {
   background-color: var(--cyber-yellow);
 }
 
-#neon-select .color.shade-100 {
+#neon-mode .color.shade-100 {
   background-color: var(--cyber-blue);
 }
-#neon-select .color.shade-300 {
+#neon-mode .color.shade-300 {
   background-color: var(--cyber-red);
 }
-#neon-select .color.shade-500 {
+#neon-mode .color.shade-500 {
   background-color: var(--cyber-blk);
 }
 

@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
     <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
     <link rel="stylesheet" href="styles/main.css">
+    <link id="theme-style" rel="stylesheet" type="text/css" href="">
 
 </head>
 <body>
@@ -26,16 +27,9 @@
         </div>
 
         <div class="theme-container ">
-            <button id="light-select" class="light theme-select" onclick="setTheme('light')" aria-label="Set to light theme" tabindex="0">
-            <div class="theme-label">Light</div>
-            <div class="theme">
-                <div class="color background"></div>
-                <div class="color shade-100"></div>
-                <div class="color shade-300"></div>
-                <div class="color shade-500"></div>
-            </div>
-            </button>
-            <button id="dark-select" class="dark theme-select" onclick="setTheme('dark')" aria-label="Set to dark theme" tabindex="-1">
+            
+          <div id="theme-select">
+            <button id="dark-mode" class="dark theme-select"  aria-label="Set to dark theme" data-mode="dark">
                 <div class="theme-label">Dark</div>
                 <div class="theme">
                     <div class="color background"></div>
@@ -44,8 +38,22 @@
                     <div class="color shade-500"></div>
                 </div>
             </button>
+          </div>
 
-            <button id="neon-select" class="neon theme-select" onclick="setTheme('neon')" aria-label="Set to neon theme" tabindex="-1">
+          <div id="theme-select">
+            <button id="light-mode" class="light theme-select"  aria-label="Set to light theme" data-mode="light">
+              <div class="theme-label">Light</div>
+              <div class="theme">
+                  <div class="color background"></div>
+                  <div class="color shade-100"></div>
+                  <div class="color shade-300"></div>
+                  <div class="color shade-500"></div>
+              </div>
+              </button>
+          </div>
+
+          <div id="theme-select">
+            <button id="neon-mode" class="neon theme-select"  aria-label="Set to neon theme" data-mode="neon">
                 <div class="theme-label">CyberPunk!</div>
                 <div class="theme">
                     <div class="color background"></div>
@@ -54,6 +62,7 @@
                     <div class="color shade-500"></div>
                 </div>
             </button>
+          </div>
         </div>
     </header>
     

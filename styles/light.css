@@ -1,0 +1,37 @@
+:root {
+  --bkg-color: #f2f7f7;
+  --footer-clr: #252629;
+  --color-lt-gray: #bbbfbf;
+  --color-xlt-gray: #333438;
+  --color-white: #fff;
+  --color-yellow: #eec71a;
+  --color-container: rgba(83, 83, 83, 0.13);
+  --container-border: 1px solid rgba(255, 255, 255, 0.125);
+}
+
+::selection {
+  color: var(--color-xlt-gray);
+  background: var(--color-yellow);
+}
+
+::-moz-selection {
+  color: var(--color-xlt-gray);
+  background: var(--color-yellow);
+}
+
+.btn {
+  border: 1px solid var(--color-xlt-gray);
+  color: var(--color-xlt-gray);
+}
+.btn:hover {
+  border: 1px solid var(--bkg-color);
+}
+
+footer,
+footer a {
+  color: var(--bkg-color);
+}
+
+footer a {
+  text-decoration: none;
+}

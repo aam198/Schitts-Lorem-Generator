@@ -264,7 +264,7 @@ button.control:focus {
 }
 
 #light-mode .color.background {
-  background-color: var(--color-white);
+  background-color: var(--color-xlt-gray);
 }
 
 #light-mode .color.shade-100 {
@@ -434,10 +434,11 @@ input {
   opacity: 0;
 }
 
+
 .result {
   width: 80vw;
   margin: 1rem auto;
-  padding: 0 1rem;
+  padding: 0 2rem;
 }
 
 /* Footer */
@@ -450,6 +451,7 @@ footer {
   background-color: var(--footer-clr);
   height: 17rem;
   width: 100%;
+  flex-wrap: wrap;
 }
 
 footer a {
@@ -509,6 +511,7 @@ footer a {
   transition: transform 0.25s ease, color 0.3s ease;
   margin-left: 7px;
 }
+
 .email a:hover {
   transform: translate3d(0px, -1px, 0px);
   color: var(--color-yellow);
@@ -527,7 +530,8 @@ footer a {
   margin: 0 1.5rem 0 0;
 }
 
-.social i:hover {
+.social i:hover,
+.copyright a:hover {
   color: var(--color-yellow);
   transition: 200ms ease-in;
 }

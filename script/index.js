@@ -26,10 +26,14 @@ for (var i = 0; themeDots.length > i; i++) {
 function setTheme(mode) {
   if (mode == "dark") {
     document.getElementById("theme-style").href = "styles/main.css";
+    document.getElementById("logo-schitt").src =
+      "assets/Schitt's_Creek_logo_dk.png";
   }
 
   if (mode == "light") {
     document.getElementById("theme-style").href = "styles/light.css";
+    document.getElementById("logo-schitt").src =
+      "assets/Schitt's_Creek_logo_lt.png";
   }
 
   if (mode == "neon") {

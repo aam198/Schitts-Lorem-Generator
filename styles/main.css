@@ -114,6 +114,24 @@ header {
   margin-right: 3rem;
 }
 
+header .logo {
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+header .logo_svg {
+  box-shadow: 0px 0 10px 1px rgb(0 0 0 / 20%);
+  display: flex;
+  flex-direction: column;
+  width: 6rem;
+}
+
+header .logo img {
+  width: 12rem;
+  height: auto;
+}
+
 .david-fadein {
   visibility: visible;
   animation: fade-in-side-two 5s;
@@ -515,7 +533,7 @@ footer a {
 }
 
 .logo img {
-  width: 12rem;
+  width: 7rem;
   height: auto;
 }
 

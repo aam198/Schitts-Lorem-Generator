@@ -115,6 +115,10 @@ header {
   margin-top: 1rem;
 }
 
+.nav-controls button:focus{
+  outline: none;
+}
+
 header .logo {
   display: flex;
   flex-direction: column;
@@ -253,8 +257,9 @@ button.control:focus {
   cursor: pointer;
 }
 
-.theme-select button:focus, .theme-select button:active{
+.theme-container button:focus{
   outline: none;
+  border: 1px dashed var(--color-xlt-gray);  
 }
 
 

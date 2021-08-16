@@ -15,6 +15,7 @@ if (theme == null) {
 }
 
 let themeDots = document.getElementsByClassName("theme-select");
+
 for (var i = 0; themeDots.length > i; i++) {
   themeDots[i].addEventListener("click", function () {
     let mode = this.dataset.mode;
@@ -28,20 +29,32 @@ function setTheme(mode) {
     document.getElementById("theme-style").href = "styles/main.css";
     document.getElementById("logo-schitt").src =
       "assets/Schitt's_Creek_logo_dk.png";
+      if (themeContainer.classList.contains("visible")) {
+        hideThemeContainer();
+      } 
   }
 
   if (mode == "light") {
+    
     document.getElementById("theme-style").href = "styles/light.css";
     document.getElementById("logo-schitt").src =
       "assets/Schitt's_Creek_logo_lt.png";
+      if (themeContainer.classList.contains("visible")) {
+        hideThemeContainer();
+      } 
   }
 
   if (mode == "neon") {
     document.getElementById("theme-style").href = "styles/neon.css";
+    if (themeContainer.classList.contains("visible")) {
+      hideThemeContainer();
+    } 
   }
-
+  
   localStorage.setItem("theme", mode);
 }
+
+
 
 function syncParaNumbers(e) {
   const value = e.target.value;

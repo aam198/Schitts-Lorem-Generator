@@ -109,9 +109,10 @@ header {
 
 .nav-controls {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   margin-right: 3rem;
+  margin-top: 1rem;
 }
 
 header .logo {
@@ -164,8 +165,6 @@ header .logo img {
   }
 
   
-
-
 button.control {
   display: inline-block;
   background-color: transparent;
@@ -254,6 +253,11 @@ button.control:focus {
   cursor: pointer;
 }
 
+.theme-select button:focus, .theme-select button:active{
+  outline: none;
+}
+
+
 .theme-select .theme-label::before {
   content: "";
   position: absolute;
@@ -306,6 +310,7 @@ button.control:focus {
   background-color: var(--bkg-color);
   box-shadow: 0px 0 10px 1px rgb(0 0 0 / 20%);
 }
+
 /* To Style the tiny color boxes in theme select */
 .theme-select .theme .color {
   height: 1rem;

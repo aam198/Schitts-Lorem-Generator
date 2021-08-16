@@ -114,6 +114,62 @@ header {
   margin-right: 3rem;
 }
 
+.david-fadein {
+    visibility: visible;
+    animation: fade-in-side-two 3s cubic-bezier(0.39, 0.575, 0.865, 1);
+  }
+  @keyframes fade-in-side-two{
+    0% {
+      -webkit-transform: translateY(0);
+      transform: translateY(0);
+      opacity: 0;
+    }
+    25% {
+      -webkit-transform: translateY(13px);
+      transform: translateY(13px);
+      opacity: 0.2;
+    }
+    50%{
+      -webkit-transform: translateY(30px);
+      transform: translateY(30px);
+      opacity: 0.50;
+    }
+    0% {
+      -webkit-transform: translateX(-70px);
+      transform: translateX(-70px) scale(1.5);
+      opacity: 1;
+    }
+  }
+
+  @keyframes fade-in-side {
+    0% {
+      -webkit-transform: translateX(-50px);
+      transform: translateX(-50px);
+      opacity: 0;
+    }
+    25%{
+      -webkit-transform: translateX(-38px);
+      transform: translateX(-38px);
+      opacity: 0.2;
+    }
+    50%{
+      -webkit-transform: translateX(-25px);
+      transform: translateX(-25px);
+      opacity: 0.50;
+    }
+    75% {
+      -webkit-transform: translateX(-13px);
+      transform: translateX(-13px);
+      opacity: 0.75;
+    }
+    100% {
+      -webkit-transform: translateY(0);
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+
 button.control {
   display: inline-block;
   background-color: transparent;
@@ -163,7 +219,7 @@ button.control:focus {
   position: absolute;
   padding: 1rem;
   right: 0;
-  top: 4rem;
+  top: 6rem;
   margin-right: 4rem;
   opacity: 0;
   display: flex;

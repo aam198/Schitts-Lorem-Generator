@@ -259,8 +259,7 @@ button.control:focus {
 
 .theme-container button:focus{
   outline: none;
-  border: 1px dashed var(--color-xlt-gray);  
-}
+} 
 
 
 .theme-select .theme-label::before {
@@ -311,7 +310,7 @@ button.control:focus {
   transition: background-color 500ms;
 }
 
-.theme-select .theme:hover {
+.theme-select .theme:hover, .theme-select:focus .theme {
   background-color: var(--bkg-color);
   box-shadow: 0px 0 10px 1px rgb(0 0 0 / 20%);
 }

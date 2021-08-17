@@ -5,8 +5,10 @@ const numofPara = document.getElementById("numofPara");
 const result = document.querySelector(".lorem-text");
 const themeDisplay = document.getElementById("theme-display");
 const themeContainer = document.querySelector(".theme-container");
+const themeSelectors = document.getElementsByClassName('theme-select');
 
 let theme = localStorage.getItem("theme");
+
 
 if (theme == null) {
   setTheme("light");
@@ -21,6 +23,8 @@ for (var i = 0; themeDots.length > i; i++) {
     let mode = this.dataset.mode;
     console.log("Option clicked:", mode);
     setTheme(mode);
+    setActiveSelector(mode);
+    
   });
 }
 
@@ -29,13 +33,13 @@ function setTheme(mode) {
     document.getElementById("theme-style").href = "styles/main.css";
     document.getElementById("logo-schitt").src =
       "assets/Schitt's_Creek_logo_dk.png";
+
       if (themeContainer.classList.contains("visible")) {
         hideThemeContainer();
       } 
   }
 
   if (mode == "light") {
-    
     document.getElementById("theme-style").href = "styles/light.css";
     document.getElementById("logo-schitt").src =
       "assets/Schitt's_Creek_logo_lt.png";

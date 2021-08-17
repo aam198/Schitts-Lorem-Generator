@@ -261,7 +261,6 @@ button.control:focus {
   outline: none;
 } 
 
-
 .theme-select .theme-label::before {
   content: "";
   position: absolute;

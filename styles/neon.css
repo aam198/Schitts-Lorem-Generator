@@ -99,10 +99,27 @@ button:hover#light-mode .background{
   border: 1px solid var(--bkg-color);
 }
 
-img.Screek.neon{
-  width: 350px;
+.schitt.neon, .creek.neon{
+  width: 325px;
+  height: 100%;
+  padding: 4px;
 }
-   
+
+.schitt.neon path{
+  fill: var(--footer-clr);
+}
+
+.creek.neon path{
+  fill: var(--color-lt-gray);
+}
+  
+
+.david-fadein.neon svg{
+  fill: var(--color-xlt-gray);
+}
+
+
+
 footer,
 footer a {
   color: var(--bkg-color);

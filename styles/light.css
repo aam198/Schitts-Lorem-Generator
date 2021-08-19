@@ -84,7 +84,13 @@ button:hover#light-mode .background{
   border: 1px solid var(--bkg-color);
 }
 
+.schitt.light path{
+  fill: var(--footer-clr);
+}
 
+.creek.light path{
+  fill: var(--color-yellow);
+}
 
 footer,
 footer a {

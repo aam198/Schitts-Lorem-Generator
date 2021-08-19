@@ -31,8 +31,6 @@ for (var i = 0; themeDots.length > i; i++) {
 function setTheme(mode) {
   if (mode == "dark") {
     document.getElementById("theme-style").href = "styles/main.css";
-    document.getElementById("logo-schitt").src =
-      "assets/Schitt's_Creek_logo_dk.png";
 
       if (themeContainer.classList.contains("visible")) {
         hideThemeContainer();
@@ -41,8 +39,7 @@ function setTheme(mode) {
 
   if (mode == "light") {
     document.getElementById("theme-style").href = "styles/light.css";
-    document.getElementById("logo-schitt").src =
-      "assets/Schitt's_Creek_logo_lt.png";
+    
       if (themeContainer.classList.contains("visible")) {
         hideThemeContainer();
       } 
@@ -50,8 +47,7 @@ function setTheme(mode) {
 
   if (mode == "neon") {
     document.getElementById("theme-style").href = "styles/neon.css";
-    document.getElementById("logo-schitt").src =
-      "assets/yellow.svg";
+    
     if (themeContainer.classList.contains("visible")) {
       hideThemeContainer();
     } 

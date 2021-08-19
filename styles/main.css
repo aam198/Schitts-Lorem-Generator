@@ -20,7 +20,7 @@
   --footer-clr: #252629;
   --color-lt-gray: #bbbfbf;
   --color-xlt-gray: #f2f7f7;
-  --color-white: #fff;
+  --color-white: #ffffff;
   --color-yellow: #eec71a;
   --color-container: rgba(83, 83, 83, 0.83);
   --container-border: 1px solid rgba(255, 255, 255, 0.125);
@@ -367,6 +367,24 @@ button.control:focus {
   background-color: var(--cyber-blk);
 }
 
+
+/* Schitt Logo */
+
+.schitt.dark, .creek.dark{
+  width: 325px;
+  height: 100%;
+  padding: 4px;
+}
+
+.schitt.dark path{
+  fill: var(--color-yellow);
+}
+
+.creek.dark path{
+  fill: var(--color-white);
+}
+
+
 /* Paragraph Selection Styles */
 
 .section-center {
@@ -550,6 +568,11 @@ footer a {
 }
 
 .logo img {
+  width: 7rem;
+  height: auto;
+}
+
+.logo svg{
   width: 7rem;
   height: auto;
 }

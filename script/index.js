@@ -50,6 +50,8 @@ function setTheme(mode) {
 
   if (mode == "neon") {
     document.getElementById("theme-style").href = "styles/neon.css";
+    document.getElementById("logo-schitt").src =
+      "assets/yellow.svg";
     if (themeContainer.classList.contains("visible")) {
       hideThemeContainer();
     } 

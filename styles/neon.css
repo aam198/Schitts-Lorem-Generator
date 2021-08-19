@@ -7,6 +7,16 @@
      --color-yellow: #fcee0a;
      --color-container: rgba(83, 83, 83, 0.13);
      --container-border: 1px solid rgba(255, 255, 255, 0.125);
+
+     --dk-xlt-gray: #f2f7f7;
+     --dk-lt-gray: #bbbfbf;
+     --dk-bkg-color: #333438;
+     --dk-color-yellow: #eec71a;
+
+     --lt-xlt-gray: var(--dk-xlt-gray);
+     --lt-color-yellow: var(--dk-color-yellow);
+     --lt-lt-gray: var(--dk-lt-gray);
+     --lt-bkg-color: var(--dk-bkg-color);
    }
    
    ::selection {
@@ -22,14 +32,14 @@
    /* Theme Container */
    
    #dark-mode .color.background {
-     background-color: var(--color-xlt-gray);
+     background-color: var( --dk-bkg-color);
    }
    
    #dark-mode .color.shade-100 {
-     background-color: var(--bkg-color);
+     background-color: var(--dk-lt-gray);
    }
    #dark-mode .color.shade-300 {
-     background-color: var(--color-yellow);
+     background-color: var( --dk-color-yellow);
    }
    #dark-mode .color.shade-500 {
      background-color: var(--color-white);
@@ -37,23 +47,28 @@
    
    
    #light-mode .color.background {
-     background-color: var(  --bkg-color);
+     background-color: var(--lt-xlt-gray);
    }
    
    #light-mode .color.shade-100 {
-     background-color: var(--color-yellow);
+     background-color: var(--lt-color-yellow);
    }
    #light-mode .color.shade-300 {
-     background-color: var(--color-lt-gray);
+     background-color: var(--lt-lt-gray);
    }
    #light-mode .color.shade-500 {
-     background-color: var(--color-xlt-gray);
+     background-color: var(--lt-bkg-color);
    }
    
    
    .theme-container button{
      transition: border 500ms;
    }
+
+.theme-select.active .theme-label::before {
+  max-width: 8.5rem;
+}
+
    
    button:hover#light-mode .background{
      border: 1px solid var(--color-white);

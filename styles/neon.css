@@ -73,31 +73,7 @@
 button:hover#light-mode .background{
   border: 1px solid var(--color-white);
 }
-   
-   
-.btn::before {
-  height: 80%;
-  top: 10%;
-  left: calc(-0.15em - 0.08em * 2);
-  filter: brightness(0.6);
-}
-
-.btn::after {
-  height: 60%;
-  top: 20%;
-  left: calc(-0.15em * 2 - 0.08em * 3);
-  filter: brightness(0.5);
-}
-   
-   
-.btn {
-  border: 1px solid var(--color-xlt-gray);
-  color: var(--color-xlt-gray);
-}
-
-.btn:hover {
-  border: 1px solid var(--bkg-color);
-}
+  
 
 .schitt.neon, .creek.neon{
   width: 325px;
@@ -120,6 +96,37 @@ button:hover#light-mode .background{
 
 
 
+.btn {
+  background-color: var(--color-lt-gray);
+  border: 1px solid var(--color-xlt-gray);
+  color: var(--color-yellow);
+}  
+
+.btn::before {
+  height: 80%;
+  top: 10%;
+  left: calc(-0.15em - 0.08em * 2);
+  filter: brightness(0.9);
+}
+
+.btn::after {
+  height: 60%;
+  top: 20%;
+  left: calc(-0.15em * 2 - 0.08em * 3);
+  filter: brightness(0.9);
+}
+
+.lorem-form {
+  backdrop-filter: blur(15px) saturate(135%);
+  -webkit-backdrop-filter: blur(15px) saturate(135%);
+  background-color: var(--color-container);
+  border-radius: 4px;
+  border: 1px solid var(--color-lt-gray);
+
+}
+  
+
+
 footer,
 footer a {
   color: var(--bkg-color);
@@ -127,5 +134,56 @@ footer a {
    
 footer a {
   text-decoration: none;
+}
+
+.email a:hover{
+  color: var(--color-lt-gray);
+}
+
+.social i:hover, .copyright a:hover {
+  color: var(--color-lt-gray);
+}
+
+.copyright{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position:relative;
+  width: 20%;
+  margin: 0 auto;
   }
-   
+
+
+.sides-7{
+  padding: 15px;
+}
+  
+.sides-7:before,
+.sides-7:after {
+  content: "";
+  position: absolute;
+  inset: -30px;
+  opacity: 0;
+  background: 
+    linear-gradient(currentColor 0 0) var(--p,0) 0,
+    linear-gradient(currentColor 0 0) var(--p,0) 0,
+    linear-gradient(currentColor 0 0) calc(100% - var(--p,0%)) 100%,
+    linear-gradient(currentColor 0 0) calc(100% - var(--p,0%)) 100%;
+  background-size: 25px 3px,3px 25px;
+  background-repeat: no-repeat;
+  transition: 0s .3s, opacity .3s;
+  }
+.sides-7:after {
+  --p: 100%;
+  }
+
+.sides-7:hover:before,
+.sides-7:hover:after {
+  opacity: 1;
+  inset: 0;
+  transition: .4s,opacity .3s;
+  }
+.sides-7:hover:after {
+  transition: .4s .4s,opacity .3s .4s;
+  }  
+  

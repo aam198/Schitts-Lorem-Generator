@@ -420,10 +420,13 @@ input {
   padding: 0.3rem 0.5rem;
   width: 5rem;
   border-radius: 0.5rem;
-  border: var(--container-border);
+  border: 1px solid var(--container-border);
+  background-color: transparent;
+  color: var(--color-xlt-gray);
   margin-bottom: 3px;
   margin-top: 3px;
   font-size: 2.25rem;
+  outline: 1px solid var(--color-yellow);
 }
 
 input:focus{
@@ -561,10 +564,9 @@ footer a {
 }
 
 .logo_svg {
-  box-shadow: 0px 0 10px 1px rgb(0 0 0 / 20%);
+  box-shadow: 0px 0 10px 1px rgb(0 0 0 / 10%);
   display: flex;
   flex-direction: column;
-  width: 6rem;
 }
 
 .logo img {
@@ -585,10 +587,10 @@ footer a {
 }
 
 .logo_svg:hover {
-  box-shadow: 0 0 0.7rem rgba(0, 0, 0, 0.5);
-  transform: translate3d(0px, -1px, 0px);
+  /* box-shadow: 0 0 0.7rem rgba(0, 0, 0, 0.5); */
+  box-shadow: 20px 20px 10px -30px rgba(0, 0, 0, 0.5) ;
+  transform: translate3d(0px, 3px, 0px);
 }
-
 .contact {
   height: 1rem;
   display: flex;
@@ -636,7 +638,9 @@ footer a {
   display: flex;
   align-content: center;
   justify-content: center;
+  position: relative;
 }
+
 
 .copyright i {
   display: flex;

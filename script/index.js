@@ -94,8 +94,7 @@ themeDisplay.addEventListener("click", () => {
 form.addEventListener("submit", (e) => {
   e.preventDefault();
 
-  const heading = document.querySelector(".heading");
-  heading.classList.remove("hidden");
+
   const value = parseInt(numofPara.value, 10);
   result.classList.add("fadeIn");
   result.classList.remove("hidden");

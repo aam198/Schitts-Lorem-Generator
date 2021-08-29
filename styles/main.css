@@ -250,7 +250,6 @@ button.control:focus {
   }
 }
 
-/* Theme Container */
 .theme-container button {
   background-color: transparent;
   border: 0;
@@ -367,6 +366,7 @@ button.control:focus {
   background-color: var(--cyber-blk);
 }
 
+/* End of Theme Containers  */
 
 /* Schitt Logo */
 
@@ -384,6 +384,9 @@ button.control:focus {
   fill: var(--color-white);
 }
 
+@keyframes flip-up{
+
+}
 
 /* Paragraph Selection Styles */
 
@@ -549,6 +552,8 @@ footer a {
   text-decoration: none;
 }
 
+
+
 .footer_main {
   display: flex;
   align-content: center;
@@ -624,8 +629,7 @@ footer a {
   margin: 0 1.5rem 0 0;
 }
 
-.social i:hover,
-.copyright a:hover {
+.social i:hover{
   color: var(--color-yellow);
   transition: 200ms ease-in;
 }
@@ -641,12 +645,41 @@ footer a {
   position: relative;
 }
 
-
-.copyright i {
-  display: flex;
-  align-items: center;
-  padding-right: 0.2rem;
+.copyright a {
+ position: relative;
+ 
 }
+
+.copyright a::before {
+  content: "";
+  position: absolute;
+  left: -0.1px;
+  right: -0.1px;
+  bottom: 0;
+  height: 100%;
+  transform: scaleY(.2);
+  transition: transform .6s cubic-bezier(0.53, 0.21, 0, 1);
+  transform-origin: bottom;
+  background-color: var(--color-yellow);
+  opacity: 0.6;
+
+}
+
+.copyright a:hover::before {
+	transform: scaleY(0.8);
+  opacity: 0.9;
+  z-index:-2;
+}
+
+.copyright a:hover{
+  z-index: 2;
+  color: var(--bkg-color);
+  transition: 200ms ease-in;
+}
+
+
+
+
 
 /* Media Queries  */
 

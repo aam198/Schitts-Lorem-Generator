@@ -370,10 +370,11 @@ button.control:focus {
 
 /* Schitt Logo */
 
-.schitt.dark, .creek.dark{
+.schitt.dark{
   width: 325px;
   height: 100%;
   padding: 4px;
+  animation: fade-in-top 2s cubic-bezier(0.39, 0.575, 0.565, 1) both;
 }
 
 .schitt.dark path{
@@ -384,8 +385,11 @@ button.control:focus {
   fill: var(--color-white);
 }
 
-@keyframes flip-up{
-
+.creek.dark {
+  width: 325px;
+  height: 100%;
+  padding: 4px;
+  animation: fade-in-top 3s cubic-bezier(0.39, 0.575, 0.565, 1) both;
 }
 
 /* Paragraph Selection Styles */

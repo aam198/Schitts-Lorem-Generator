@@ -651,7 +651,6 @@ footer a {
 
 .copyright a {
  position: relative;
- 
 }
 
 .copyright a::before {
@@ -666,7 +665,6 @@ footer a {
   transform-origin: bottom;
   background-color: var(--color-yellow);
   opacity: 0.6;
-
 }
 
 .copyright a:hover::before {

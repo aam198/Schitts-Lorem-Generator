@@ -146,16 +146,31 @@ footer a {
 
 .copyright{
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
   position:relative;
-  width: 20%;
+  width: 30%;
   margin: 0 auto;
+  height: 4vh;
   }
 
+.copyright a::before {
+  content: "";
+  position: absolute;
+  left: -0.1px;
+  right: -0.1px;
+  bottom: 0;
+  height: 100%;
+ 
+  transform-origin: bottom;
+  background-color: transparent;
+  opacity: 0;
+}
 
-.sides-7{
-  padding: 15px;
+.sides-7 a {
+  border-bottom: 1px solid var(--bkg-color);
+  cursor: pointer;
 }
   
 .sides-7:before,
@@ -169,10 +184,11 @@ footer a {
     linear-gradient(currentColor 0 0) var(--p,0) 0,
     linear-gradient(currentColor 0 0) calc(100% - var(--p,0%)) 100%,
     linear-gradient(currentColor 0 0) calc(100% - var(--p,0%)) 100%;
-  background-size: 25px 3px,3px 25px;
+  background-size: 45px 3px,3px 15px;
   background-repeat: no-repeat;
   transition: 0s .3s, opacity .3s;
   }
+
 .sides-7:after {
   --p: 100%;
   }

@@ -24,7 +24,6 @@ for (var i = 0; themeDots.length > i; i++) {
     console.log("Option clicked:", mode);
     setTheme(mode);
     setActiveSelector(mode);
-    
   });
 }
 
@@ -57,14 +56,8 @@ function setTheme(mode) {
 }
 
 
-
-function syncParaNumbers(e) {
-  const value = e.target.value;
-  numofPara.value = value;
-}
-
 const setActiveSelector = (className) => {
-  var selectedTheme = document.getElementById(`${className}-mode`);
+  const selectedTheme = document.getElementById(`${className}-mode`);
   [...themeSelectors].forEach((item) => {
     item.classList.remove("active");
   });
@@ -83,6 +76,7 @@ const hideThemeContainer = () => {
   });
 };
 
+
 themeDisplay.addEventListener("click", () => {
   if (themeContainer.classList.contains("visible")) {
     hideThemeContainer();
@@ -90,6 +84,13 @@ themeDisplay.addEventListener("click", () => {
     showThemeContainer();
   }
 });
+
+
+function syncParaNumbers(e) {
+  const value = e.target.value;
+  numofPara.value = value;
+}
+
 
 form.addEventListener("submit", (e) => {
   e.preventDefault();

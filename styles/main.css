@@ -374,7 +374,7 @@ button.control:focus {
   width: 325px;
   height: 100%;
   padding: 4px;
-  animation: fade-in-top 2s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  animation: slide-down 1.5s cubic-bezier(0.39, 0.575, 0.565, 1) both;
 }
 
 .schitt.dark path{
@@ -389,7 +389,23 @@ button.control:focus {
   width: 325px;
   height: 100%;
   padding: 4px;
-  animation: fade-in-top 3s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  animation: slide-down 2.5s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+}
+
+
+@keyframes slide-down{
+  0% {
+      transform: translateY(-1000px);
+  }
+  90%{
+      transform: translateY(25px);
+  }
+  95%{
+      transform: translateY(-10px);
+  }
+  100%{
+      transform: translateY(0px);
+  }
 }
 
 /* Paragraph Selection Styles */

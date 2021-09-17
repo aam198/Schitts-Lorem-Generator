@@ -7,6 +7,7 @@ const themeDisplay = document.getElementById("theme-display");
 const themeContainer = document.querySelector(".theme-container");
 const themeSelectors = document.getElementsByClassName('theme-select');
 
+
 let theme = localStorage.getItem("theme");
 
 

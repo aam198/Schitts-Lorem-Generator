@@ -203,3 +203,18 @@ footer a {
   transition: .4s .4s,opacity .3s .4s;
   }  
   
+ @media (max-width: 1000px) {
+   .copyright{
+     width: 60%;
+   }
+
+   .theme-container{
+     z-index: 15;
+   }
+ }
+
+ @media (max-width: 635px){
+   .copyright{
+     width: 80%;
+   }
+ }

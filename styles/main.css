@@ -589,7 +589,7 @@ footer a {
 }
 
 .logo_svg {
-  box-shadow: 0px 0 10px 1px rgb(0 0 0 / 10%);
+  filter: drop-shadow(0px 0 10px 1px rgb(0 0 0 / 10%));
   display: flex;
   flex-direction: column;
 }
@@ -708,7 +708,7 @@ footer a {
   z-index:-2;
 }
 
-.copyright a:hover{
+.copyright a:hover, .copyright a:focus{
   color: var(--color-yellow);
   transition: 200ms ease-in;
 }

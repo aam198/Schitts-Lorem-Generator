@@ -92,8 +92,12 @@ button:hover#light-mode .background{
 
 .david-fadein.neon svg{
   fill: var(--color-xlt-gray);
+ 
 }
 
+.david-fadein:hover {
+  opacity: 0.8;
+}
 
 
 .btn {

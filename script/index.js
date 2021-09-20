@@ -7,6 +7,9 @@ const themeDisplay = document.getElementById("theme-display");
 const themeContainer = document.querySelector(".theme-container");
 const themeSelectors = document.getElementsByClassName('theme-select');
 
+const introSound = document.getElementById('introSound');
+const ewDavid = document.getElementById('ewDavid');
+const davidSvg = document.getElementById('david-popout');
 
 let theme = localStorage.getItem("theme");
 
@@ -92,11 +95,15 @@ function syncParaNumbers(e) {
   numofPara.value = value;
 }
 
+davidSvg.addEventListener("mouseover", () => {
+  ewDavid.play();
+});
+
 
 form.addEventListener("submit", (e) => {
   e.preventDefault();
 
-
+  introSound.play();
   const value = parseInt(numofPara.value, 10);
   result.classList.add("fadeIn");
   result.classList.remove("hidden");

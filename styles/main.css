@@ -714,7 +714,11 @@ footer a {
 }
 
 
-
+svg:hover path.st0{
+  fill: #fffbe9;
+  opacity: 0.50;
+  transition: 500ms ease-in;
+}
 
 
 /* Media Queries  */

@@ -375,7 +375,8 @@ button.control:focus {
 }
 
 button.sound{
-  margin-top: 10px;
+  padding: 5px 5px;
+  color: var(--color-xlt-gray);
 }
 
 .sound-select{
@@ -391,8 +392,8 @@ button.sound{
     cursor: pointer;
     color: var(--color-yellow);
     transition: background-color 500ms;
-
 }
+
 
 /* End of Theme Containers  */
 

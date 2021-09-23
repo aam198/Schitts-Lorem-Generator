@@ -8,6 +8,7 @@ const themeContainer = document.querySelector(".theme-container");
 const themeSelectors = document.getElementsByClassName('theme-select');
 
 const soundControl = document.getElementById('sound-control');
+const soundChange = document.getElementById('soundChange');
 const introSound = document.getElementById('introSound');
 const ewDavid = document.getElementById('ewDavid');
 const davidSvg = document.getElementById('david-popout');
@@ -97,10 +98,24 @@ function syncParaNumbers(e) {
 }
 
 soundControl.addEventListener("click", () => {
-  ewDavid.removeAttribute("muted");
-    davidSvg.addEventListener("mouseover", () => {
-    ewDavid.play();
-   });
+  if(ewDavid.hasAttribute("muted")){
+     ewDavid.removeAttribute("muted");
+      ewDavid.muted=false;
+      introSound.removeAttribute("muted");
+      introSound.muted=false;
+      soundChange.innerHTML="Sound is on: ";
+      soundControl.querySelector('i.fas').classList.remove('fa-volume-mute');
+      soundControl.querySelector('i.fas').classList.add('fa-volume-up');
+  }
+  else{
+    ewDavid.setAttribute("muted", "true");
+    ewDavid.muted=true;
+    introSound.setAttribute("muted", "true");
+    introSound.muted=true;
+    soundChange.innerHTML="Sounds is off:";
+    soundControl.querySelector('i.fas').classList.remove('fa-volume-up');
+    soundControl.querySelector('i.fas').classList.add('fa-volume-mute');
+  }
 });
 
 davidSvg.addEventListener("mouseover", () => {

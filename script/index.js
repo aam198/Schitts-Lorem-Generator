@@ -7,6 +7,7 @@ const themeDisplay = document.getElementById("theme-display");
 const themeContainer = document.querySelector(".theme-container");
 const themeSelectors = document.getElementsByClassName('theme-select');
 
+const soundControl = document.getElementById('sound-control');
 const introSound = document.getElementById('introSound');
 const ewDavid = document.getElementById('ewDavid');
 const davidSvg = document.getElementById('david-popout');
@@ -94,6 +95,13 @@ function syncParaNumbers(e) {
   const value = e.target.value;
   numofPara.value = value;
 }
+
+soundControl.addEventListener("click", () => {
+  ewDavid.removeAttribute("muted");
+    davidSvg.addEventListener("mouseover", () => {
+    ewDavid.play();
+   });
+});
 
 davidSvg.addEventListener("mouseover", () => {
   ewDavid.play();

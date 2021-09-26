@@ -766,6 +766,23 @@ svg:hover path.st0{
     font-size: 1.7rem;
     margin-bottom: 0.5rem;
   }
+  header{
+    padding: 1.3rem 2rem 1.3rem 2rem;
+  }
+
+  header .logo{
+    align-items: flex-start;
+  }
+  .nav-controls{
+    margin-right:1rem;
+  }
+
+  .theme-container{
+    background-color: rgba(83, 83, 83, 0.96);
+  }
+  .theme-container.visible{
+    z-index: 100;
+  }
   .lorem-form {
     margin-top: 2rem;
     padding: 0.8rem 1.4rem 1.4rem 1.4rem;

@@ -100,3 +100,18 @@ footer a {
 footer a {
   text-decoration: none;
 }
+
+@media only screen and (max-width: 768px) {
+  .theme-container{
+    background-color: rgba(83, 83, 83, 0.93);
+  }
+  .theme-select .theme-label{
+    color: var(--color-white);
+  }
+  button.sound{
+    color: var(--color-white);
+  }
+  button:hover.sound{
+    color:var(--color-xlt-gray);
+  }
+}

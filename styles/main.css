@@ -148,6 +148,7 @@ header .logo img {
 .david-fadein {
   visibility: visible;
   animation: fade-in-side-two 5s;
+  cursor: pointer;
   }
   
   @keyframes fade-in-side-two{

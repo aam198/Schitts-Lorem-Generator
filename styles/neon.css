@@ -140,6 +140,9 @@ footer a {
   text-decoration: none;
 }
 
+.email a::before {
+  background-color: var(--bkg-color);
+}
 .email a:hover{
   color: var(--color-lt-gray);
 }
@@ -164,16 +167,18 @@ footer a {
   position: absolute;
   left: -0.1px;
   right: -0.1px;
-  bottom: 0;
-  height: 100%;
- 
+  bottom: -3px;
+  height: 25%;
   transform-origin: bottom;
-  background-color: transparent;
-  opacity: 0;
+  background-color: var(--bkg-color);
+  opacity: 1;
+  transform: rotate(-2deg);
+  transition: transform .6s cubic-bezier(0.53, 0.21, 0, 1);
+  z-index: -1;
 }
 
 .sides-7 a {
-  border-bottom: 1px solid var(--bkg-color);
+
   cursor: pointer;
 }
   
@@ -197,12 +202,16 @@ footer a {
   --p: 100%;
   }
 
+.site:hover{
+  text-decoration: none;
+}
 .sides-7:hover:before,
-.sides-7:hover:after {
+.sides-7:hover:after, .site:hover {
   opacity: 1;
   inset: 0;
   transition: .4s,opacity .3s;
   }
+
 .sides-7:hover:after {
   transition: .4s .4s,opacity .3s .4s;
   }  

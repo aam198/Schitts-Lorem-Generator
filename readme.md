@@ -11,7 +11,7 @@ Site to quickly generate lorem ipsum placeholder text for your project, filled w
 
 ## Visit
 
-[Netlify Status](https://api.netlify.com/api/v1/badges/4151ca40-1788-4959-9367-38ad71d11492/deploy-status)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/f6dbaeac-7487-4c29-935f-65a28665c5fc/deploy-status)](https://app.netlify.com/sites/schitt-ipsum/deploys)
 See the fun for yourself: [Schitt's Creek Lorem Ipsum Generator](https://schitt-ipsum.netlify.app/)
 
 ## Clone Repo

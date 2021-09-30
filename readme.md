@@ -1,5 +1,5 @@
 
-# Schitt's Lorem Ipsum
+# Schitt's Lorem Ipsum Generator
 
 Site to quickly generate lorem ipsum placeholder text for your project, filled with our favorite Schitt's Creek quotes.
 

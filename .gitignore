@@ -1,4 +1,6 @@
 .vscode/**/*
 
+.DS_Store
 .mp3
 
+assets/.DS_Store
